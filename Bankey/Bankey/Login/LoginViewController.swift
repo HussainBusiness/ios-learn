@@ -7,11 +7,16 @@
 
 import UIKit
 
+protocol LoginViewControllerDelgate: AnyObject{
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    weak var delegate: LoginViewControllerDelgate?
     
     let headTitle = UILabel()
     let subTitle = UILabel()
@@ -29,7 +34,11 @@ class LoginViewController: UIViewController {
         
         style()
         layout()
-        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+       signInButton.configuration?.showsActivityIndicator = false
     }
 
 
@@ -119,6 +128,7 @@ extension LoginViewController{
         
         if userName == "hussain" && password == "password"{
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         }else{
             configureView(withMessage: "Incorrect username / password")
         }

@@ -53,10 +53,12 @@ extension LoginView{
         
         userNameTextField.translatesAutoresizingMaskIntoConstraints = false
         userNameTextField.placeholder = "User name"
+        userNameTextField.text = "hussain"
         userNameTextField.delegate = self
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.placeholder = "Password"
+        passwordTextField.text = "password"
         passwordTextField.delegate = self
         passwordTextField.isSecureTextEntry = true
         
@@ -103,3 +105,5 @@ extension LoginView: UITextFieldDelegate{
     }
     
 }
+
+
