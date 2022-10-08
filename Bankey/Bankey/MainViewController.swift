@@ -17,7 +17,7 @@ class MainViewController: UITabBarController{
     
     private func setupViews(){
         
-        let summaryVC = AccountViewController()
+        let summaryVC = AccountSummaryViewController()
         let moneyVC = MoveMoneyiewController()
         let moreVC = MoreViewController()
         
@@ -52,12 +52,7 @@ class MainViewController: UITabBarController{
     }
 }
 
-class AccountViewController: UIViewController{
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .green
-    }
-}
+
 
 class MoveMoneyiewController: UIViewController{
     override func viewDidLoad() {

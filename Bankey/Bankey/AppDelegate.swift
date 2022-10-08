@@ -19,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    var window: UIWindow?
    let loginViewController = LoginViewController()
    let onboardingContainerViewController = OnboardingContainerViewController()
-   let dummyViewController = DummyViewController()
+  // let dummyViewController = DummyViewController()
    let mainViewController = MainViewController()
    var hasOnboarded = false
+    
+   let accountSummaryVC = AccountSummaryViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -30,12 +32,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         loginViewController.delegate = self
         onboardingContainerViewController.delegate = self
-        dummyViewController.logoutDelegate = self
+     //   dummyViewController.logoutDelegate = self
         
       //  window?.rootViewController = onboardingContainerViewController
         
         
-       window?.rootViewController = mainViewController
+    
+        
+        window?.rootViewController = mainViewController
+        mainViewController.setStatusBar()
+        
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
         
       //  mainViewController.selectedIndex = 1
         
@@ -48,7 +56,7 @@ extension AppDelegate: LoginViewControllerDelgate{
     func didLogin() {
         
         if LocalState.hasOnboarded{
-            setRootViewController(dummyViewController)
+            setRootViewController(mainViewController)
         }else{
             setRootViewController(onboardingContainerViewController)
         }
@@ -62,7 +70,7 @@ extension AppDelegate: LoginViewControllerDelgate{
 extension AppDelegate: OnboardingContainerViewControllerDelgate{
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setRootViewController(dummyViewController)
+        setRootViewController(mainViewController)
     }
     
     
