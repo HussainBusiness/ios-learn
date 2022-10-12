@@ -25,6 +25,8 @@
 		973AEDB628F3FCB7009B8A6B /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDB528F3FCB7009B8A6B /* Decimal+Extensions.swift */; };
 		973AEDB828F3FD5A009B8A6B /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDB728F3FD5A009B8A6B /* CurrencyFormatter.swift */; };
 		973AEDD928F416EC009B8A6B /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDD828F416EC009B8A6B /* CurrencyFormatterTests.swift */; };
+		973AEDDB28F69F25009B8A6B /* NSNotification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */; };
+		973AEDDD28F6A44F009B8A6B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		973AEDCE28F4165E009B8A6B /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		973AEDD728F416EC009B8A6B /* BankeyUnitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankeyUnitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		973AEDD828F416EC009B8A6B /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
+		973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extensions.swift"; sourceTree = "<group>"; };
+		973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +158,10 @@
 		973AEDA728F1911F009B8A6B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */,
 				973AEDA528F190C0009B8A6B /* UIViewController+Extensions.swift */,
 				973AEDB528F3FCB7009B8A6B /* Decimal+Extensions.swift */,
+				973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 				973AEDA128F12A3F009B8A6B /* DummyViewController.swift in Sources */,
 				973AED8728EED648009B8A6B /* LoginViewController.swift in Sources */,
 				973AEDB428F2CAF2009B8A6B /* AccountSummaryCell.swift in Sources */,
+				973AEDDD28F6A44F009B8A6B /* UITextField+Extensions.swift in Sources */,
 				973AED9F28EFE66E009B8A6B /* OnboardingViewController.swift in Sources */,
 				973AEDA928F19345009B8A6B /* MainViewController.swift in Sources */,
 				973AEDAC28F1DDFB009B8A6B /* AccountSummaryViewController.swift in Sources */,
+				973AEDDB28F69F25009B8A6B /* NSNotification+Extensions.swift in Sources */,
 				973AED8328EED648009B8A6B /* AppDelegate.swift in Sources */,
 				973AED9D28EFDE45009B8A6B /* OnboardingContainerViewController.swift in Sources */,
 			);
