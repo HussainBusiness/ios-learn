@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    let mainViewController = MainViewController()
    var hasOnboarded = false
     
-   let accountSummaryVC = AccountSummaryViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -36,32 +35,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
       //  window?.rootViewController = onboardingContainerViewController
         
-        
+        displayLogin()
     
-        
-        window?.rootViewController = mainViewController
-        mainViewController.setStatusBar()
-        
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().backgroundColor = appColor
-        
       //  mainViewController.selectedIndex = 1
         
         return true
     }
-}
-
-extension AppDelegate: LoginViewControllerDelgate{
-  
-    func didLogin() {
-        
+    
+    private func displayLogin(){
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen(){
         if LocalState.hasOnboarded{
+            prepMainView()
             setRootViewController(mainViewController)
         }else{
             setRootViewController(onboardingContainerViewController)
         }
         
-        
+    }
+    
+    private func prepMainView(){
+        mainViewController.setStatusBar()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+    }
+    
+    
+}
+
+extension AppDelegate: LoginViewControllerDelgate{
+  
+    func didLogin() {
+        displayNextScreen()
     }
     
     
@@ -69,7 +76,7 @@ extension AppDelegate: LoginViewControllerDelgate{
 
 extension AppDelegate: OnboardingContainerViewControllerDelgate{
     func didFinishOnboarding() {
-        LocalState.hasOnboarded = true
+        prepMainView()
         setRootViewController(mainViewController)
     }
     
@@ -95,7 +102,7 @@ extension AppDelegate{
         
         window.rootViewController = vc
         window.makeKeyAndVisible()
-        UIView.transition(with: window, duration: 0.9, options: .transitionCrossDissolve, animations: nil)
+        UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
     }
 }
 
