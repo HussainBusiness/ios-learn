@@ -28,6 +28,14 @@ class LoginViewController: UIViewController {
     var password: String? {
         return loginView.passwordTextField.text
     }
+    
+    // Animation
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    var titleLeadingAncor: NSLayoutConstraint?
+    
+    var subTitleLeadingAnchor: NSLayoutConstraint?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +47,11 @@ class LoginViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
        signInButton.configuration?.showsActivityIndicator = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        animate()
     }
 
 
@@ -67,6 +80,7 @@ extension LoginViewController{
         headTitle.numberOfLines = 0
         headTitle.font = headTitle.font.withSize(30)
         headTitle.text = "Bankey"
+        headTitle.alpha = 0
         
         subTitle.translatesAutoresizingMaskIntoConstraints = false
         subTitle.textAlignment = .center
@@ -84,13 +98,19 @@ extension LoginViewController{
         NSLayoutConstraint.activate([
             
             subTitle.topAnchor.constraint(equalToSystemSpacingBelow: headTitle.bottomAnchor, multiplier: 4),
-            headTitle.centerXAnchor.constraint(equalTo: loginView.centerXAnchor),
+            headTitle.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)])
+        
+            titleLeadingAncor = headTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+            titleLeadingAncor?.isActive = true
            
             
+        NSLayoutConstraint.activate([
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subTitle.bottomAnchor, multiplier: 4),
-            subTitle.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 10),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: subTitle.trailingAnchor, multiplier: 10),
+            subTitle.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)])
+                                    subTitleLeadingAnchor = subTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+                                    subTitleLeadingAnchor?.isActive = true
             
+        NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1),
@@ -143,3 +163,26 @@ extension LoginViewController{
     
 }
 
+extension LoginViewController{
+    
+    private func animate(){
+        let animator1 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            self.titleLeadingAncor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        
+        let animator2 = UIViewPropertyAnimator(duration: 1, curve: .easeInOut) {
+            self.subTitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        
+        let animator3 = UIViewPropertyAnimator(duration: 2, curve: .easeInOut) {
+            self.headTitle.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        
+        animator1.startAnimation()
+        animator2.startAnimation(afterDelay: 1)
+        animator3.startAnimation(afterDelay: 0.4)
+    }
+}
