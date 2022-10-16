@@ -27,6 +27,7 @@
 		973AEDD928F416EC009B8A6B /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDD828F416EC009B8A6B /* CurrencyFormatterTests.swift */; };
 		973AEDDB28F69F25009B8A6B /* NSNotification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */; };
 		973AEDDD28F6A44F009B8A6B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */; };
+		973AEDE028FBFA19009B8A6B /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDF28FBFA19009B8A6B /* ShakeyBellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		973AEDD828F416EC009B8A6B /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extensions.swift"; sourceTree = "<group>"; };
 		973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		973AEDDF28FBFA19009B8A6B /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				973AED9B28EFDDC2009B8A6B /* Onboarding */,
 				973AEDAA28F1DD8F009B8A6B /* AccountSummary */,
 				973AEDA228F1369E009B8A6B /* Utils */,
+				973AEDDE28FBF992009B8A6B /* Components */,
 				973AED9728EEDAA8009B8A6B /* Files */,
 			);
 			path = Bankey;
@@ -200,6 +203,14 @@
 				973AEDD728F416EC009B8A6B /* BankeyUnitTests-Bridging-Header.h */,
 			);
 			path = BankeyUnitTests;
+			sourceTree = "<group>";
+		};
+		973AEDDE28FBF992009B8A6B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				973AEDDF28FBFA19009B8A6B /* ShakeyBellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 				973AED8728EED648009B8A6B /* LoginViewController.swift in Sources */,
 				973AEDB428F2CAF2009B8A6B /* AccountSummaryCell.swift in Sources */,
 				973AEDDD28F6A44F009B8A6B /* UITextField+Extensions.swift in Sources */,
+				973AEDE028FBFA19009B8A6B /* ShakeyBellView.swift in Sources */,
 				973AED9F28EFE66E009B8A6B /* OnboardingViewController.swift in Sources */,
 				973AEDA928F19345009B8A6B /* MainViewController.swift in Sources */,
 				973AEDAC28F1DDFB009B8A6B /* AccountSummaryViewController.swift in Sources */,
