@@ -28,6 +28,8 @@
 		973AEDDB28F69F25009B8A6B /* NSNotification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */; };
 		973AEDDD28F6A44F009B8A6B /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */; };
 		973AEDE028FBFA19009B8A6B /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDDF28FBFA19009B8A6B /* ShakeyBellView.swift */; };
+		973AEDE228FE85DD009B8A6B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDE128FE85DD009B8A6B /* Date+Extensions.swift */; };
+		973AEDE428FE881D009B8A6B /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDE328FE881D009B8A6B /* AccountSummaryViewController+Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		973AEDDA28F69F25009B8A6B /* NSNotification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+Extensions.swift"; sourceTree = "<group>"; };
 		973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		973AEDDF28FBFA19009B8A6B /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		973AEDE128FE85DD009B8A6B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		973AEDE328FE881D009B8A6B /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				973AEDA528F190C0009B8A6B /* UIViewController+Extensions.swift */,
 				973AEDB528F3FCB7009B8A6B /* Decimal+Extensions.swift */,
 				973AEDDC28F6A44F009B8A6B /* UITextField+Extensions.swift */,
+				973AEDE128FE85DD009B8A6B /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				973AEDAB28F1DDFB009B8A6B /* AccountSummaryViewController.swift */,
+				973AEDE328FE881D009B8A6B /* AccountSummaryViewController+Networking.swift */,
 				973AEDB128F2CA74009B8A6B /* Header */,
 				973AEDB228F2CA8B009B8A6B /* Cell */,
 			);
@@ -326,12 +332,14 @@
 				973AEDB428F2CAF2009B8A6B /* AccountSummaryCell.swift in Sources */,
 				973AEDDD28F6A44F009B8A6B /* UITextField+Extensions.swift in Sources */,
 				973AEDE028FBFA19009B8A6B /* ShakeyBellView.swift in Sources */,
+				973AEDE228FE85DD009B8A6B /* Date+Extensions.swift in Sources */,
 				973AED9F28EFE66E009B8A6B /* OnboardingViewController.swift in Sources */,
 				973AEDA928F19345009B8A6B /* MainViewController.swift in Sources */,
 				973AEDAC28F1DDFB009B8A6B /* AccountSummaryViewController.swift in Sources */,
 				973AEDDB28F69F25009B8A6B /* NSNotification+Extensions.swift in Sources */,
 				973AED8328EED648009B8A6B /* AppDelegate.swift in Sources */,
 				973AED9D28EFDE45009B8A6B /* OnboardingContainerViewController.swift in Sources */,
+				973AEDE428FE881D009B8A6B /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
