@@ -34,6 +34,8 @@
 		973AEDEA28FEB5ED009B8A6B /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973AEDE928FEB5ED009B8A6B /* AccountTests.swift */; };
 		97C676CF2906739D00CB13B9 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676CE2906739D00CB13B9 /* SkeletonLoadable.swift */; };
 		97C676D1290674C200CB13B9 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676D0290674C200CB13B9 /* SkeletonCell.swift */; };
+		97C676D4290901EA00CB13B9 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676D3290901EA00CB13B9 /* ProfileManager.swift */; };
+		97C676D6290904ED00CB13B9 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676D5290904ED00CB13B9 /* AccountSummaryViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		973AEDE928FEB5ED009B8A6B /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		97C676CE2906739D00CB13B9 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		97C676D0290674C200CB13B9 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		97C676D3290901EA00CB13B9 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		97C676D5290904ED00CB13B9 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 				973AEDE328FE881D009B8A6B /* AccountSummaryViewController+Networking.swift */,
 				973AEDB128F2CA74009B8A6B /* Header */,
 				973AEDB228F2CA8B009B8A6B /* Cell */,
+				97C676D2290901A100CB13B9 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -243,8 +248,17 @@
 			children = (
 				973AEDE728FEB512009B8A6B /* ProfileTests.swift */,
 				973AEDE928FEB5ED009B8A6B /* AccountTests.swift */,
+				97C676D5290904ED00CB13B9 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		97C676D2290901A100CB13B9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				97C676D3290901EA00CB13B9 /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +366,7 @@
 				973AEDB628F3FCB7009B8A6B /* Decimal+Extensions.swift in Sources */,
 				97C676D1290674C200CB13B9 /* SkeletonCell.swift in Sources */,
 				973AEDA628F190C0009B8A6B /* UIViewController+Extensions.swift in Sources */,
+				97C676D4290901EA00CB13B9 /* ProfileManager.swift in Sources */,
 				973AED9A28EEDC36009B8A6B /* LoginView.swift in Sources */,
 				973AEDA428F136C2009B8A6B /* LocalState.swift in Sources */,
 				973AEDAE28F1E1D9009B8A6B /* AccountSummaryHeaderView.swift in Sources */,
@@ -380,6 +395,7 @@
 				973AEDD928F416EC009B8A6B /* CurrencyFormatterTests.swift in Sources */,
 				973AEDEA28FEB5ED009B8A6B /* AccountTests.swift in Sources */,
 				973AEDE828FEB512009B8A6B /* ProfileTests.swift in Sources */,
+				97C676D6290904ED00CB13B9 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
