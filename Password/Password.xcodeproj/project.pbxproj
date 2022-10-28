@@ -11,6 +11,8 @@
 		97C676E8290A726A00CB13B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676E7290A726A00CB13B9 /* ViewController.swift */; };
 		97C676ED290A726B00CB13B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C676EC290A726B00CB13B9 /* Assets.xcassets */; };
 		97C676F0290A726B00CB13B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C676EE290A726B00CB13B9 /* LaunchScreen.storyboard */; };
+		97C676FD290A79DD00CB13B9 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676FC290A79DD00CB13B9 /* UITextField+Extensions.swift */; };
+		97C676FF290BA5B200CB13B9 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676FE290BA5B200CB13B9 /* PasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		97C676EC290A726B00CB13B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C676EF290A726B00CB13B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C676F1290A726B00CB13B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C676FC290A79DD00CB13B9 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		97C676FE290BA5B200CB13B9 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +57,10 @@
 			isa = PBXGroup;
 			children = (
 				97C676F7290A734800CB13B9 /* Files */,
+				97C676FB290A79A800CB13B9 /* Extensions */,
 				97C676E3290A726A00CB13B9 /* AppDelegate.swift */,
 				97C676E7290A726A00CB13B9 /* ViewController.swift */,
+				97C676FE290BA5B200CB13B9 /* PasswordTextField.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -67,6 +73,14 @@
 				97C676F1290A726B00CB13B9 /* Info.plist */,
 			);
 			name = Files;
+			sourceTree = "<group>";
+		};
+		97C676FB290A79A800CB13B9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97C676FC290A79DD00CB13B9 /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C676FD290A79DD00CB13B9 /* UITextField+Extensions.swift in Sources */,
 				97C676E8290A726A00CB13B9 /* ViewController.swift in Sources */,
+				97C676FF290BA5B200CB13B9 /* PasswordTextField.swift in Sources */,
 				97C676E4290A726A00CB13B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
