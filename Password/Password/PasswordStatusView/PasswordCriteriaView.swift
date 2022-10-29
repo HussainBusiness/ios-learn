@@ -48,7 +48,7 @@ class PasswordCriteriaView: UIView{
     }
     
     override var intrinsicContentSize: CGSize{
-        return CGSize(width: 200, height: 40)
+        return CGSize(width: 200, height: 20)
     }
 }
 
@@ -57,8 +57,10 @@ extension PasswordCriteriaView{
     func style(){
         translatesAutoresizingMaskIntoConstraints = false
         
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 8
+        
       
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "circle")!.withTintColor(.tertiaryLabel, renderingMode: .alwaysOriginal)

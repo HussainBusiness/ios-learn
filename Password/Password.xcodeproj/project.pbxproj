@@ -14,6 +14,7 @@
 		97C676FD290A79DD00CB13B9 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676FC290A79DD00CB13B9 /* UITextField+Extensions.swift */; };
 		97C676FF290BA5B200CB13B9 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C676FE290BA5B200CB13B9 /* PasswordTextField.swift */; };
 		97C67702290D163E00CB13B9 /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C67701290D163E00CB13B9 /* PasswordCriteriaView.swift */; };
+		97C67704290D3C8200CB13B9 /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C67703290D3C8200CB13B9 /* PasswordStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		97C676FC290A79DD00CB13B9 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		97C676FE290BA5B200CB13B9 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		97C67701290D163E00CB13B9 /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
+		97C67703290D3C8200CB13B9 /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				97C67701290D163E00CB13B9 /* PasswordCriteriaView.swift */,
+				97C67703290D3C8200CB13B9 /* PasswordStatusView.swift */,
 			);
 			path = PasswordStatusView;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				97C676FD290A79DD00CB13B9 /* UITextField+Extensions.swift in Sources */,
 				97C676E8290A726A00CB13B9 /* ViewController.swift in Sources */,
 				97C67702290D163E00CB13B9 /* PasswordCriteriaView.swift in Sources */,
+				97C67704290D3C8200CB13B9 /* PasswordStatusView.swift in Sources */,
 				97C676FF290BA5B200CB13B9 /* PasswordTextField.swift in Sources */,
 				97C676E4290A726A00CB13B9 /* AppDelegate.swift in Sources */,
 			);

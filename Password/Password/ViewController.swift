@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController{
     let stackView = UIStackView()
-    let passwordTextField = PasswordTextField(placeHolderText: "New Password.")
-    let criteriaView = PasswordCriteriaView(text: "Uppercase letter (A-Z)")
+    let newPasswordTextField = PasswordTextField(placeHolderText: "New Password.")
+    let statusView = PasswordStatusView()
+    let confirmPasswordTextField = PasswordTextField(placeHolderText: "Re-enter new Password.")
+    let resetButton = UIButton(type: .custom)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -25,15 +28,27 @@ extension ViewController{
         stackView.axis = .vertical
         stackView.spacing = 20
 
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
         
-        criteriaView.translatesAutoresizingMaskIntoConstraints = false
+        statusView.translatesAutoresizingMaskIntoConstraints = false
+        statusView.layer.cornerRadius = 5
+        statusView.clipsToBounds = true
+        
+        confirmPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.configuration = .filled()
+        resetButton.setTitle("Reset password", for: [])
+     //   resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
+
     }
 
     func layout(){
 
-      //  stackView.addArrangedSubview(passwordTextField)
-        stackView.addArrangedSubview(criteriaView)
+        stackView.addArrangedSubview(newPasswordTextField)
+        stackView.addArrangedSubview(statusView)
+        stackView.addArrangedSubview(confirmPasswordTextField)
+        stackView.addArrangedSubview(resetButton)
         view.addSubview(stackView)
         
         // StackView
